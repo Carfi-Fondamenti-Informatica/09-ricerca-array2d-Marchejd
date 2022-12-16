@@ -1,13 +1,13 @@
 #include "lib.h"
-int controllo (char ar[][20], char test[][20])
-{
-    int cont = 0;
-    for (int i = 0; i<10; i++)
-    {
-        cont++;
-        if (ar[i][20] == test[1][20])
-        {
-            cout<<"la posizione è : "<<cont<<endl;
+bool controllo (char proprio[20] , char nomi[10][20] , int &p){
+    for(int i=0; i<10; i++){
+        for(int k=0; k<20; k++){
+            if(proprio[k] != nomi[i][k]){
+                k=20;
+            }else if(k==19){
+                p=i;
+                return true;
+            }
         }
-    }
+    }return false;
 }
