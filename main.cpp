@@ -11,6 +11,7 @@
                 nomi[i][k]=' ';
                 proprio[k]=' ';
             }
+            
         }
         for(int i=0; i<10; i++){
             cin >> nomi[i];
